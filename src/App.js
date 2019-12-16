@@ -1,24 +1,44 @@
 import React from 'react';
 import logo from './logo.svg';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 import './App.css';
+import SideMenu from './SideMenu/SideMenu';
+import Attendance from './pages/Attendance';
+import AddMembers from './pages/AddMembers';
+import MembersList from './pages/MembersList';
+import Notification from './pages/Notification';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="wrapper">
+      <Router>
+      <SideMenu/>
+        <Switch>
+          
+        <Route path="/notification">
+            <Notification/>
+          </Route>
+          <Route path="/addmembers">
+            <AddMembers/>
+          </Route>
+          <Route path="/membersList">
+            <MembersList/>
+          </Route>
+          <Route path="/">
+            <Attendance/>
+          </Route>
+          
+        </Switch>
+         
+      </Router>
+     
+    </div>
     </div>
   );
 }
