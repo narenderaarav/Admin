@@ -1,10 +1,17 @@
 import React from 'react';
 import './SideMenu.css';
-import Content from '../pages/SlideMenuBar';
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { 
+    faClock,
+    faUsers,
+    faUser,
+    faBell 
+} from '@fortawesome/free-solid-svg-icons'
 
-function SideMenu() {
+//const showText = true;
+
+function SideMenu(props) {
     return <React.Fragment>
        
             <nav className="sidebar" id="sidebar">
@@ -24,16 +31,30 @@ function SideMenu() {
                     </li> */}
 
                     <li>
-                    <FontAwesomeIcon icon="coffee" /> <NavLink exact to="/" activeClassName="active">Attendance</NavLink>
+                        <NavLink exact to="/" activeClassName="active">
+                            <FontAwesomeIcon icon={faClock} /> <span>Attendance</span>
+                            {/* {props.showText && <span>Attendance</span>} */}
+                        </NavLink>
                     </li>
                     <li>
-                        <NavLink exact to="/addmembers" activeClassName="active">Add Members</NavLink>
+                        <NavLink exact to="/addmembers" activeClassName="active">
+                             <FontAwesomeIcon icon={faUser} /> <span>Add Members</span>
+                        </NavLink>
                     </li>
                     <li>
-                        <NavLink exact to="/membersList" activeClassName="active">Members List</NavLink>
+                        <NavLink exact to="/membersList" activeClassName="active">
+                        <FontAwesomeIcon icon={faUsers} /> <span>Members List</span>
+                        </NavLink>
                     </li>
                     <li>
-                        <NavLink exact to="/notification" activeClassName="active">Notification</NavLink>
+                        <NavLink exact to="/notification" activeClassName="active">
+                        <FontAwesomeIcon icon={faBell} /> <span>Notification</span>
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink exact to="/login" activeClassName="active">
+                        <FontAwesomeIcon icon={faUser} /> <span>Login</span>
+                        </NavLink>
                     </li>
                 </ul>
             </nav>

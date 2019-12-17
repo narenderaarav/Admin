@@ -6,14 +6,14 @@
 .sidebar{
     min-width: 250px;
     max-width: 250px;
-    background:#7386D5;
+    background:#2e1154;
     color:#fff;
     transition: all 0.3s;
 }
 
 .sidebar .sidebar-header{
   padding: 20px;
-  background: #7386D5;
+  background: #2e1154;
 }
 
 
@@ -55,14 +55,15 @@
 
 /* Add an active class to the active dropdown button */
 .list-unstyled a.active {
-  background-color: rgb(9, 34, 136);
+  background-color:#0067f4;
   color: white;
   
 }
 
 .list-unstyled li{
-  background-color: rgb(182, 197, 255);
-  margin-bottom: 1px;
+  
+  border-bottom: 1px #451b7c solid;
+ 
 }
 
 .list-unstyled li:hover{
@@ -110,6 +111,8 @@
 }
 
 
-
+.list-unstyled li span{
+  padding-left: 8px;
+}
 
 

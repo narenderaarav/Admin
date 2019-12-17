@@ -1,9 +1,7 @@
 import React from 'react';
-import SlideMenuBar from './SlideMenuBar'
 import './Content.css';
 function AddMembers() {
-    return <div className="contentArea">
-        <SlideMenuBar />
+    return <>
         <div className="workSection">
             <div className="heading"><h1>Add Memebers</h1></div>
             <div className="formcontainer">
@@ -68,7 +66,7 @@ function AddMembers() {
                 </div>
             </div>
         </div>
-    </div>
+        </>
 }
 
 export default AddMembers;

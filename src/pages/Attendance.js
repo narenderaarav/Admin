@@ -1,11 +1,9 @@
 import React from 'react';
-import SlideMenuBar from './SlideMenuBar';
 import './Content.css';
 
 
 function Attendance(){
-    return <div className="contentArea">
-        <SlideMenuBar/>
+    return <>
     <div className="workSection">
     <div className="heading"><h1>Attendance</h1></div>
     <div className="formcontainer">
@@ -60,7 +58,7 @@ function Attendance(){
     </div>
     </div>
 
-</div>
+</>
     
 }
 
