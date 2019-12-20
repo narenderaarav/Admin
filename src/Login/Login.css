@@ -5,12 +5,14 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    background: #eee;
 }
 .loginBox{
     width: 600px;
     max-width: 100%;
-    border: 1px #f9f8f8 solid;
-    box-shadow: -1px 2px 22px #eee;
+    border: 1px #d0d0d0 solid;
+    box-shadow: -1px 2px 22px #949494;
+    background: #fff;
 }
 
 .loginSidebar{

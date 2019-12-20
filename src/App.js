@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import {
   BrowserRouter as Router,
@@ -14,37 +14,43 @@ import Notification from './pages/Notification';
 import SlideMenuBar from './pages/SlideMenuBar';
 import Login from './Login/Login'
 
-function App() {
-  return (
-    <div className="App">
-     
+
+
+class App extends Component {
+  state = {
+    authenticated: false
+  }
+  render() {
+    if (this.state.authenticated) {
+      return (<div className="App">
       <div className="wrapper">
         <Router>
-          <SideMenu/>
+          <SideMenu />
           <div className="contentArea">
-            <SlideMenuBar/>
-            <Switch> 
-            <Route path="/login">
-                <Login/>
-              </Route> 
+            <SlideMenuBar />
+            <Switch>
+              
               <Route path="/notification">
-                <Notification/>
+                <Notification />
               </Route>
               <Route path="/addmembers">
-                <AddMembers/>
+                <AddMembers />
               </Route>
               <Route path="/membersList">
-                <MembersList/>
+                <MembersList />
               </Route>
               <Route path="/">
-                <Attendance/>
+                <Attendance />
               </Route>
             </Switch>
           </div>
         </Router>
       </div>
-    </div>
-  );
+    </div>)
+    }else{
+      return(<Login/>)
+    }
+  }
 }
 
 export default App;

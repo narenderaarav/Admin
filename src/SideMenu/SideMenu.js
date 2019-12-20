@@ -46,16 +46,13 @@ function SideMenu(props) {
                         <FontAwesomeIcon icon={faUsers} /> <span>Members List</span>
                         </NavLink>
                     </li>
+                   
                     <li>
                         <NavLink exact to="/notification" activeClassName="active">
                         <FontAwesomeIcon icon={faBell} /> <span>Notification</span>
                         </NavLink>
                     </li>
-                    <li>
-                        <NavLink exact to="/login" activeClassName="active">
-                        <FontAwesomeIcon icon={faUser} /> <span>Login</span>
-                        </NavLink>
-                    </li>
+                    
                 </ul>
             </nav>
             
