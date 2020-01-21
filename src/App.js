@@ -17,9 +17,23 @@ import Login from './Login/Login'
 
 
 class App extends Component {
-  state = {
-    authenticated: false
+  // state = {
+  //   authenticated: false
+  // }
+
+  constructor(props){
+    super(props)
+    var value = sessionStorage.getItem("authenticated");
+    value = value != null ? JSON.parse(value) : false;
+
+    this.state = {authenticated: value};
   }
+
+  onLoggedIn = () => {
+    sessionStorage.setItem("authenticated", "true");
+    this.setState({authenticated: true});
+  }
+
   render() {
     if (this.state.authenticated) {
       return (<div className="App">
@@ -48,7 +62,7 @@ class App extends Component {
       </div>
     </div>)
     }else{
-      return(<Login/>)
+      return(<Login onLoggedIn1={this.onLoggedIn}/>)
     }
   }
 }
