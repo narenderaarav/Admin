@@ -39,7 +39,7 @@ class Login extends Component {
                     <div className="row">
                         <div className="col-md-5">
                             <div className="loginSidebar">
-                                <div className="loginLogo"><img src={"logo.jpg"} /></div>
+                                <div className="loginLogo"><img alt="" src={"logo.jpg"} /></div>
                                 <div className="loginContent">
                                     <h1>Welcome back</h1>
                                     <p>Thanks for your efforts to work faster and be more productive</p>

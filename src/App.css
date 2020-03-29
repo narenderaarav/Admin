@@ -1,5 +1,6 @@
-.App {
-  
+body{
+  font-family: 'Barlow'!important ;
+
 }
 
 .App-logo {
@@ -27,6 +28,9 @@
 .App-link {
   color: #61dafb;
 }
+
+
+
 
 @keyframes App-logo-spin {
   from {

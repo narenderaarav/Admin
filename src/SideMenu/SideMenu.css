@@ -1,6 +1,7 @@
 .wrapper{
     display: flex;
     align-items: stretch;
+    
 }
 
 .sidebar{
@@ -14,6 +15,7 @@
 .sidebar .sidebar-header{
   padding: 20px;
   background: #2e1154;
+  border-bottom: 1px #391982 solid;
 }
 
 
@@ -103,6 +105,28 @@
   float: right;
   padding-right: 8px;
 }
+
+
+
+#sidebar.active .sidebar-header h3{
+  display: none;
+
+}
+
+#sidebar.active .sidebar-header strong {
+  display: block;
+}
+#sidebar .sidebar-header strong{
+  display: none;
+    font-size: 1.8em;
+}
+
+#sidebar.active .list-unstyled li span{
+  display: block;
+  padding-left: 0px;
+  font-size: 14px;
+}
+
 
 /* Some media queries for responsiveness */
 @media screen and (max-height: 450px) {

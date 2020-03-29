@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import {
   BrowserRouter as Router,
   Switch,
@@ -7,15 +6,12 @@ import {
 } from "react-router-dom";
 import './App.css';
 import SideMenu from './SideMenu/SideMenu';
-import Attendance from './pages/Attendance';
-import AddMembers from './pages/AddMembers';
+import VideoManagment from './pages/VideoManagment';
+import UserManagement from './pages/UserManagement';
 import MembersList from './pages/MembersList';
 import Notification from './pages/Notification';
 import SlideMenuBar from './pages/SlideMenuBar';
 import Login from './Login/Login'
-
-
-
 class App extends Component {
   // state = {
   //   authenticated: false
@@ -25,7 +21,6 @@ class App extends Component {
     super(props)
     var value = sessionStorage.getItem("authenticated");
     value = value != null ? JSON.parse(value) : false;
-
     this.state = {authenticated: value};
   }
 
@@ -43,18 +38,17 @@ class App extends Component {
           <div className="contentArea">
             <SlideMenuBar />
             <Switch>
-              
               <Route path="/notification">
                 <Notification />
               </Route>
-              <Route path="/addmembers">
-                <AddMembers />
+              <Route path="/userManagement">
+                <UserManagement />
               </Route>
               <Route path="/membersList">
                 <MembersList />
               </Route>
               <Route path="/">
-                <Attendance />
+                <VideoManagment />
               </Route>
             </Switch>
           </div>
